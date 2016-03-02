@@ -1,0 +1,25 @@
+{
+  "name": "react-native-flexbox-grid",
+  "version": "0.0.1",
+  "description": "Grid system for react native based on flexbox grid's api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rundmt/react-native-flexbox-grid.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "flexbox",
+    "grid"
+  ],
+  "author": "Derek Tor <derekmuoktor@gmail.com> (http://derektor.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rundmt/react-native-flexbox-grid/issues"
+  },
+  "homepage": "https://github.com/rundmt/react-native-flexbox-grid#readme"
+}
