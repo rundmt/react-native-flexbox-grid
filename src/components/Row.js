@@ -52,7 +52,7 @@ export default class Row extends Component {
       return null;
     } else {
       return (
-        <View onLayout={this.getWidth.bind(this)} style={[styles.container, this.props.style, {flexWrap: this.props.wrap ? 'wrap' : 'nowrap'}, {alignItems: this.props.alignItems, justifyContent: this.props.justifyContent}]}>
+        <View {...this.props} onLayout={this.getWidth.bind(this)} style={[styles.container, this.props.style, {flexWrap: this.props.wrap ? 'wrap' : 'nowrap'}, {alignItems: this.props.alignItems, justifyContent: this.props.justifyContent}]}>
             {React.Children.map(this.props.children, (element, idx) => {
               // Check if state is updated before cloning. Causes Layout to be slower, but stable.
               if(this.state.updated){
