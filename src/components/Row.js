@@ -1,11 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
 
 import React from 'react-native';
-import {setScreenSize} from '../lib/ScreenSize';
+import {screenSize} from '../lib/ScreenSize';
 
 var {
   Component,
@@ -20,7 +16,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 export default class Row extends Component {
   constructor(props){
     super(props);
-    this.screenSize = setScreenSize();
+    this.screenSize = screenSize;
     this.state = {
       width: SCREEN_WIDTH,
       updated: false,

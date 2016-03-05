@@ -6,7 +6,7 @@ var {
   Dimensions
 } = React;
 
-export function setScreenSize(){
+function setScreenSize(){
   const SCREEN_WIDTH = Dimensions.get('window').width;
   const IPAD_WIDTH = 768;
   const IPAD_PRO_WIDTH = 1024;
@@ -21,3 +21,5 @@ export function setScreenSize(){
     return 'large';
   }
 }
+
+export const screenSize = setScreenSize();

@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react-native';
-import {setScreenSize} from '../lib/ScreenSize';
+import {screenSize} from '../lib/ScreenSize';
 
 var {
   Component,
@@ -14,7 +14,7 @@ var {
 export default class Column extends Component {
   constructor(props){
     super(props);
-    this.screenSize = setScreenSize();
+    this.screenSize = screenSize;
     this.state = {
       width: this.getComponentWidth(),
       marginLeft: this.getComponentOffset(),
