@@ -17,8 +17,6 @@ In your react native project
 npm install react-native-flexbox-grid
 ```
 
-
-
 ### Import
 
 ```
