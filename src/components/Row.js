@@ -42,7 +42,7 @@ export default class Row extends Component {
   }
 
   render() {
-    //if row doesn't or is 0 exist default to 12
+    //if size doesn't exist or is 0 default to 12
     let rowSize = this.props.size > 0 ? this.props.size : 12;
     if(this.state.hidden){
       return null;

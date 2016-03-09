@@ -1,3 +1,3 @@
 export { default as Row } from './components/Row';
 export { default as Column } from './components/Column';
-export { default as ScreenSize } from './lib/ScreenSize';
+export {screenSize as SCREEN_SIZE} from './lib/ScreenSize';
