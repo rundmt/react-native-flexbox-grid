@@ -53,7 +53,9 @@ The main difference is you can specify the grid size. By default `<Row>` is a si
 * Basic Grid
 * Styles
 * Hiding Items
+* Basic Unit Testing
 
 # To Do
-* Testing.
-* Horizontal Display(Not sure if needed/wanted)
+* Jest Testing. (Possibly New Examples Repo)
+* More Examples
+* More Documentation
