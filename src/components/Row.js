@@ -43,7 +43,7 @@ export default class Row extends Component {
           onLayout={this._getWidth.bind(this)}
           style={[this.props.style,
                   { flexDirection: 'row',
-                    flexWrap: this.props.wrap ? 'wrap' : 'nowrap',
+                    flexWrap: this.props.nowrap ? 'nowrap' : 'wrap',
                     alignItems: this.props.alignItems,
                     justifyContent: this.props.justifyContent}]}>
             {this._cloneElements()}

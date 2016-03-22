@@ -47,15 +47,23 @@ The api is inspired by
 
 The main difference is you can specify the grid size. By default `<Row>` is a size of 12. However if you want you can make a `<Row>` any size you want.
 
+#### Changes for 0.2.0
+
+As of 0.2.0 Row will automatically wrap components. If you do not want components to automatically wrap you must specify `nowrap` in the row's prop.
+
+```
+  <Row size={12} nowrap>
+```
 
 
-# What's working
+
+### What's working
 * Basic Grid
 * Styles
 * Hiding Items
 * Basic Unit Testing
 
-# To Do
+### To Do
 * Jest Testing. (Possibly New Examples Repo)
 * More Examples
 * More Documentation
