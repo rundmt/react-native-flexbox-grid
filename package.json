@@ -1,10 +1,10 @@
 {
   "name": "react-native-flexbox-grid",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Grid system for react native based on flexbox grid's api",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha  -R spec /tests/getComponentOffset-specs.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/rundmt/react-native-flexbox-grid/issues"
   },
-  "homepage": "https://github.com/rundmt/react-native-flexbox-grid#readme"
+  "homepage": "https://github.com/rundmt/react-native-flexbox-grid#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
 }

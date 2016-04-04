@@ -47,6 +47,10 @@ The api is inspired by
 
 The main difference is you can specify the grid size. By default `<Row>` is a size of 12. However if you want you can make a `<Row>` any size you want.
 
+### More Documentation
+
+[Documentation](https://github.com/rundmt/react-native-flexbox-grid/wiki/Documentation)
+
 #### Changes for 0.2.0
 
 As of 0.2.0 Row will automatically wrap components. If you do not want components to automatically wrap you must specify `nowrap` in the row's prop.
@@ -64,6 +68,4 @@ As of 0.2.0 Row will automatically wrap components. If you do not want component
 * Basic Unit Testing
 
 ### To Do
-* Jest Testing. (Possibly New Examples Repo)
-* More Examples
-* More Documentation
+* Integration Testing. (Possibly New Examples Repo)

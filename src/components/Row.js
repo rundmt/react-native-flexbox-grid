@@ -55,6 +55,7 @@ export default class Row extends Component {
 
 Row.propTypes = {
   size: PropTypes.number,
+  nowrap: PropTypes.bool,
   smHidden: PropTypes.bool,
   mdHidden: PropTypes.bool,
   lgHidden: PropTypes.bool,
