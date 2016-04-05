@@ -33,7 +33,7 @@ import {Column as Col, Row} from 'react-native-flexbox-grid';
         First Column
       </Text>
     </Col>
-    <Col sm={6} md={4} lg={3}
+    <Col sm={6} md={4} lg={3}>
       <Text>
         Second Column
       </Text>
