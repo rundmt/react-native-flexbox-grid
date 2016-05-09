@@ -1,14 +1,9 @@
 'use strict';
 
-import React from 'react-native';
+import React, {Component, PropTypes} from 'react';
 import {screenSize} from '../lib/ScreenSize';
 import {isHidden, getComponentWidth, getComponentOffset} from '../lib/helpers';
-
-var {
-  Component,
-  PropTypes,
-  View,
-} = React;
+import {View} from 'react-native';
 
 export default class Column extends Component {
   render(){
