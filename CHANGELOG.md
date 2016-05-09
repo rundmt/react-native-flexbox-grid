@@ -1,7 +1,7 @@
 ## 0.2.2 (May 9, 2016)
 
 ### react-native-flexbox-grid
-- Updated to work with React Native 0.25. (Thanks to sylvainbaronnet).
+- Updated to work with React Native 0.25. (Thanks to [sylvainbaronnet](https://github.com/sylvainbaronnet)).
 - Set up `npm test` to run all mocha tests.
 
 
