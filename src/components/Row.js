@@ -3,33 +3,31 @@ import {screenSize} from '../lib/ScreenSize';
 import {isHidden} from '../lib/helpers';
 import {View} from 'react-native';
 
-export default class Row extends Component {
-  _cloneElements(){
-      //if size doesn't exist or is 0 default to 12
-      const rowSize = this.props.size > 0 ? this.props.size : 12;
+const cloneElements = (props) => {
+    //if size doesn't exist or is 0 default to 12
+    const rowSize = props.size > 0 ? props.size : 12;
 
-      return React.Children.map(this.props.children, (element) => {
-        return React.cloneElement(element, {rowSize: rowSize});
-      });
-  }
+    return React.Children.map(props.children, (element) => {
+      return React.cloneElement(element, {rowSize: rowSize});
+    });
+}
 
-  render() {
-    if(isHidden(screenSize, this.props)){
+const Row = (props) => {
+  if(isHidden(screenSize, props)){
       return null;
     } else {
       return (
-        <View {...this.props}
-          style={[this.props.style,
+        <View {...props}
+          style={[props.style,
                   { flexDirection: 'row',
-                    flexWrap: this.props.nowrap ? 'nowrap' : 'wrap',
-                    alignItems: this.props.alignItems,
-                    justifyContent: this.props.justifyContent
+                    flexWrap: props.nowrap ? 'nowrap' : 'wrap',
+                    alignItems: props.alignItems,
+                    justifyContent: props.justifyContent
                   }]}>
-            {this._cloneElements()}
+            {cloneElements(props)}
         </View>
       );
     }
-  }
 }
 
 Row.propTypes = {
@@ -39,3 +37,5 @@ Row.propTypes = {
   mdHidden: PropTypes.bool,
   lgHidden: PropTypes.bool,
 };
+
+export default Row;

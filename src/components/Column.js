@@ -3,8 +3,7 @@ import {screenSize} from '../lib/ScreenSize';
 import {isHidden, getComponentWidth, getComponentOffset} from '../lib/helpers';
 import {View} from 'react-native';
 
-export default class Column extends Component {
-  render(){
+const Column = (props) => {
     const {
       sm,
       smOffset,
@@ -16,8 +15,8 @@ export default class Column extends Component {
       lgOffset,
       lgHidden,
       rowSize,
-      ...props
-    } = this.props;
+      ...rest
+    } = props;
 
     const gridProps = {
       sm,
@@ -37,19 +36,18 @@ export default class Column extends Component {
     } else {
       return (
         <View
-        {...props}
+        {...rest}
         style={[
-          this.props.style, {
+          props.style, {
             width: getComponentWidth(screenSize, gridProps),
             flexDirection: 'column',
             marginLeft: getComponentOffset(screenSize, gridProps)
           }]}>
-          {props.children}
+          {rest.children}
         </View>
       );
     }
-  }
-}
+};
 
 Column.propTypes = {
   sm: PropTypes.number,
@@ -62,3 +60,5 @@ Column.propTypes = {
   lgOffset: PropTypes.number,
   lgHidden: PropTypes.bool,
 };
+
+export default Column;
