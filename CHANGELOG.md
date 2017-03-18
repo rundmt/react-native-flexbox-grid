@@ -1,3 +1,6 @@
+## 0.3.0
+- Updated to work with React Native 0.42. Internal components now rely on percentages.
+
 ## 0.2.2 (May 9, 2016)
 
 ### react-native-flexbox-grid
