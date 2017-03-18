@@ -1,6 +1,6 @@
 {
   "name": "react-native-flexbox-grid",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Grid system for react native based on flexbox grid's api",
   "main": "src/index.js",
   "scripts": {
