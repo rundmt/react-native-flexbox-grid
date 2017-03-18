@@ -1,4 +1,4 @@
-module.exports.isHidden = function(screenSize, props){
+const isHidden = (screenSize, props) => {
   switch(screenSize) {
     case 'small':
       return props.smHidden ? true : false;
@@ -11,31 +11,33 @@ module.exports.isHidden = function(screenSize, props){
   }
 };
 
-module.exports.getComponentWidth = function(screenSize, props){
+const toPercent = (num) => (num * 100) + '%';
+
+const getComponentWidth = (screenSize, props) => {
   switch(screenSize) {
     case 'small':
       if(props.sm){
-        return props.parentWidth * props.sm/props.rowSize;
+        return toPercent(props.sm/props.rowSize);
       } else {
         return props.parentWidth;
       }
       break;
     case 'medium':
       if(props.md){
-        return props.parentWidth * props.md/props.rowSize;
+        return toPercent(props.md/props.rowSize);
       } else if(props.sm){
-        return props.parentWidth * props.sm/props.rowSize;
+        return toPercent(props.sm/props.rowSize);
       } else {
         return props.parentWidth;
       }
       break;
     case 'large':
       if(props.lg){
-        return props.parentWidth * props.lg/props.rowSize;
+        return toPercent(props.lg/props.rowSize);
       } else if(props.md){
-        return props.parentWidth * props.md/props.rowSize;
+        return toPercent(props.md/props.rowSize);
       } else if(props.sm){
-        return props.parentWidth * props.sm/props.rowSize;
+        return toPercent(props.sm/props.rowSize);
       } else {
         return props.parentWidth;
       }
@@ -45,31 +47,31 @@ module.exports.getComponentWidth = function(screenSize, props){
   }
 };
 
-module.exports.getComponentOffset = function(screenSize, props){
+const getComponentOffset = (screenSize, props) => {
   switch(screenSize) {
     case 'small':
       if(props.smOffset){
-        return props.parentWidth * props.smOffset/props.rowSize;
+        return toPercent(props.smOffset/props.rowSize);
       } else {
         return 0;
       }
       break;
     case 'medium':
       if(props.mdOffset){
-        return props.parentWidth * props.mdOffset/props.rowSize;
+        return toPercent(props.mdOffset/props.rowSize);
       } else if(props.smOffset){
-        return props.parentWidth * props.smOffset/props.rowSize;
+        return toPercent(props.smOffset/props.rowSize);
       } else {
         return 0;
       }
       break;
     case 'large':
       if(props.lgOffset){
-        return props.parentWidth * props.lgOffset/props.rowSize;
+        return toPercent(props.lgOffset/props.rowSize);
       } else if(props.mdOffset){
-        return props.parentWidth * props.mdOffset/props.rowSize;
+        return toPercent(props.mdOffset/props.rowSize);
       } else if(props.smOffset){
-        return props.parentWidth * props.smOffset/props.rowSize;
+        return toPercent(props.smOffset/props.rowSize);
       } else {
         return 0;
       }
@@ -78,3 +80,5 @@ module.exports.getComponentOffset = function(screenSize, props){
       return 0;
   }
 };
+
+module.exports = {isHidden, getComponentWidth, getComponentOffset}
