@@ -51,6 +51,10 @@ The main difference is you can specify the grid size. By default `<Row>` is a si
 
 [Documentation](https://github.com/rundmt/react-native-flexbox-grid/wiki/Documentation)
 
+#### Changes for 0.3.0
+
+React Native now supports percentages as of 0.42. All of our versions going forward will rely on percentages. It has much faster performance compared to what we did before when we relied on `onLayout`. The API for apps is the same. There should be no difference in expected output of your app.
+
 #### Changes for 0.2.0
 
 As of 0.2.0 Row will automatically wrap components. If you do not want components to automatically wrap you must specify `nowrap` in the row's prop.
@@ -59,6 +63,11 @@ As of 0.2.0 Row will automatically wrap components. If you do not want component
   <Row size={12} nowrap>
 ```
 
+## Known Issues
+
+For react-native 0.41 and earlier you muse use `react-native-flexbox-grid@0.2.0` or earlier.
+
+Since React Native before 0.41 and earlier doesn't support percentages we have to rely on using React Native's `onlayout` to pass the width of the parent to the child. This causes layouts to be a bit slow, because the child has to wait for the parent to layout and then rerender. This problem is resolved by using react native 0.42 and the `react-native-flexbox-grid@0.3.0` or later.
 
 
 ### What's working

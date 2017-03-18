@@ -1,51 +1,33 @@
-'use strict';
-
 import React, {Component, PropTypes} from 'react';
 import {screenSize} from '../lib/ScreenSize';
 import {isHidden} from '../lib/helpers';
 import {View} from 'react-native';
 
-export default class Row extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      width: 0
-    };
-  }
+const cloneElements = (props) => {
+    //if size doesn't exist or is 0 default to 12
+    const rowSize = props.size > 0 ? props.size : 12;
 
-  _getWidth(res){
-    this.setState({width: res.nativeEvent.layout.width});
-  }
+    return React.Children.map(props.children, (element) => {
+      return React.cloneElement(element, {rowSize: rowSize});
+    });
+}
 
-  _cloneElements(){
-    // Check if state is updated before cloning. Causes layout to rerender less.
-    if(this.state.width > 0){
-      //if size doesn't exist or is 0 default to 12
-      const rowSize = this.props.size > 0 ? this.props.size : 12;
-
-      return React.Children.map(this.props.children, (element) => {
-        return React.cloneElement(element, {parentWidth: this.state.width, rowSize: rowSize});
-      });
-    }
-  }
-
-  render() {
-    if(isHidden(screenSize, this.props)){
+const Row = (props) => {
+  if(isHidden(screenSize, props)){
       return null;
     } else {
       return (
-        <View {...this.props}
-          onLayout={this._getWidth.bind(this)}
-          style={[this.props.style,
+        <View {...props}
+          style={[props.style,
                   { flexDirection: 'row',
-                    flexWrap: this.props.nowrap ? 'nowrap' : 'wrap',
-                    alignItems: this.props.alignItems,
-                    justifyContent: this.props.justifyContent}]}>
-            {this._cloneElements()}
+                    flexWrap: props.nowrap ? 'nowrap' : 'wrap',
+                    alignItems: props.alignItems,
+                    justifyContent: props.justifyContent
+                  }]}>
+            {cloneElements(props)}
         </View>
       );
     }
-  }
 }
 
 Row.propTypes = {
@@ -55,3 +37,5 @@ Row.propTypes = {
   mdHidden: PropTypes.bool,
   lgHidden: PropTypes.bool,
 };
+
+export default Row;
