@@ -23,8 +23,7 @@ export default class Row extends Component {
                   { flexDirection: 'row',
                     flexWrap: this.props.nowrap ? 'nowrap' : 'wrap',
                     alignItems: this.props.alignItems,
-                    justifyContent: this.props.justifyContent,
-                    width: '100%'
+                    justifyContent: this.props.justifyContent
                   }]}>
             {this._cloneElements()}
         </View>
