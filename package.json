@@ -17,6 +17,9 @@
     "flexbox",
     "grid"
   ],
+  "dependencies": {
+    "prop-types": "^15.6.0",
+  },
   "author": "Derek Tor <derekmuoktor@gmail.com> (http://derektor.me)",
   "license": "MIT",
   "bugs": {

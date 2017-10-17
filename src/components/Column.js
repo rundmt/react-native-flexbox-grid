@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from "prop-types";
 import {screenSize} from '../lib/ScreenSize';
 import {isHidden, getComponentWidth, getComponentOffset} from '../lib/helpers';
 import {View} from 'react-native';
