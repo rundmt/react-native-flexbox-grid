@@ -1,3 +1,5 @@
+### Warning: This package is no longer maintained
+
 # Flexbox Grid
 
 A Set of React Native Components to make a grid easier to reason about.
