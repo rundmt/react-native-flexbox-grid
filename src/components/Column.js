@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
-import {screenSize} from '../lib/ScreenSize';
+import {getScreenSize} from '../lib/ScreenSize';
 import {isHidden, getComponentWidth, getComponentOffset} from '../lib/helpers';
 import {View} from 'react-native';
 
 const Column = (props) => {
+    const screenSize = getScreenSize()
     const {
       sm,
       smOffset,

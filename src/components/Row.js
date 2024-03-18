@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
-import {screenSize} from '../lib/ScreenSize';
+import {getScreenSize} from '../lib/ScreenSize';
 import {isHidden} from '../lib/helpers';
 import {View} from 'react-native';
 
@@ -14,8 +14,8 @@ const cloneElements = (props) => {
 }
 
 const Row = (props) => {
-  if(isHidden(screenSize, props)){
-      return null;
+  if(isHidden(getScreenSize(), props)){
+     return null;
     } else {
       return (
         <View {...props}
